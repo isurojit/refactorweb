@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyword Extractor - Introduction</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-dark text-light">
+    <header class="text-center py-5">
+      <h1 class="display-4">Keyword Extractor</h1>
+      <p class="lead">
+        Your go-to tool for extracting relevant keywords from any webpage!
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="introduction mb-5">
+        <h2 class="text-danger">What is Keyword Extractor?</h2>
+        <p>
+          The Keyword Extractor Chrome extension allows you to easily extract
+          and compile relevant keywords from any webpage with just a single
+          click. Perfect for students, researchers, and content creators!
+        </p>
+      </section>
+
+      <section class="screenshots mb-5">
+        <h2 class="text-danger">Screenshots</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="image-box bg-light text-dark p-4">
+              <img
+                src="./img/clicking-extension.png"
+                alt="Screenshot 1"
+                class="img-fluid mb-2"
+                data-toggle="modal"
+                data-target="#imageModal"
+                data-img-src="screenshot1.png"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image-box bg-light text-dark p-4">
+              <img
+                src="./img/extracting-keywords.png"
+                alt="Screenshot 2"
+                class="img-fluid mb-2"
+                data-toggle="modal"
+                data-target="#imageModal"
+                data-img-src="screenshot2.png"
+              />
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image-box bg-light text-dark p-4">
+              <img
+                src="./img/copying-all.png"
+                alt="Screenshot 3"
+                class="img-fluid mb-2"
+                data-toggle="modal"
+                data-target="#imageModal"
+                data-img-src="screenshot3.png"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="usage mb-5">
+        <h2 class="text-danger">How It Works</h2>
+        <p>
+          1. Install the Keyword Extractor extension from the Chrome Web
+          Store.<br />
+          2. Navigate to any webpage you want to extract keywords from.<br />
+          3. Click the Keyword Extractor icon in your toolbar.<br />
+          4. Press the "Extract Keywords" button, and watch the magic happen!<br />
+          5. Copy your keywords with a click and paste them wherever you need.
+        </p>
+      </section>
+
+      <section class="contact mb-5">
+        <h2 class="text-danger">Contact Support</h2>
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/admin@webrefactor.com"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-danger text-light text-center py-4">
+      <p>&copy; 2024 Web Refactor. All rights reserved.</p>
+      <span
+        ><a href="./privacy-policy.html" target="_blank"
+          >Privacy Policy</a
+        ></span
+      >
+    </footer>
+
+    <!-- Modal for Image Preview -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modal-image" src="" alt="Preview" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
+    <script>
+      // Image modal functionality
+      $("#imageModal").on("show.bs.modal", function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var imgSrc = button.data("img-src"); // Extract info from data-* attributes
+        var modalImg = $("#modal-image");
+
+        modalImg.attr("src", imgSrc); // Update the modal's image source
+      });
+    </script>
+  </body>
+</html>

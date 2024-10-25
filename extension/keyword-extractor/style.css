@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+  background-color: #0070ba; /* PayPal blue */
+  color: white;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+.introduction,
+.usage,
+.contact {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #0070ba; /* PayPal blue */
+  margin-bottom: 15px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.image-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #0070ba; /* PayPal blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005f9e; /* Darker blue on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0070ba; /* PayPal blue */
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+body {
+  background-color: #1c1c1c; /* Dark grey */
+}
+
+header {
+  background-color: #c0392b; /* Light red */
+}
+
+.image-box {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #c0392b; /* Light red */
+}
+a {
+  color: white;
+}
